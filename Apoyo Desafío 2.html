@@ -83,6 +83,14 @@ for(let consulta of dental){
 }
 
 
+//Ejercicio N6
+
+for(let consulta of traumatologia){
+  if(consulta.prevision === 'FONASA'){
+    document.write(`<div style="margin-top: 10px">${consulta.paciente} - ${consulta.prevision}</div>`); // Se pueden agregar estilos directos
+  }
+}
+
 //Agregar código para el desafio 2 aquí
 
 document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
