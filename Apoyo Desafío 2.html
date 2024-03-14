@@ -51,56 +51,53 @@ radiologia.pop();
 radiologia.shift();
 
 //Ejercicio N3
-document.write(`<p>Lista de consulta Dental</p>`)
+document.write(`<br><p>Lista de consulta Dental:</p>`)
 for(let consulta of dental){
   document.write(`<p class="consulta">${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`); // Se pueden agregar clases
 }
+document.write(`<hr>`)
 
 // Ejercicio N4 
+document.write(`<p>Listado de todos los pacientes atendidos en el centro medico:</p>`)
 
 document.write('<ul>');
 for(let consulta of radiologia){
   document.write(`<li>${consulta.paciente}</li>`);
 }
-document.write('</ul>');
 
-document.write('<ul>');
 for(let consulta of traumatologia){
   document.write(`<li>${consulta.paciente}</li>`);
 }
-document.write('</ul>');
 
-document.write('<ul>');
 for(let consulta of dental){
   document.write(`<li>${consulta.paciente}</li>`);
 }
 document.write('</ul>');
 
+document.write(`<hr>`)
 
 // Ejercicio 5
-
+document.write(`<p>Listado de pacientes pertenecientes a ISAPRE de la consulta Dental:</p>`)
 for(let consulta of dental){
   if(consulta.prevision === 'ISAPRE'){
     document.write(`<div>${consulta.paciente} - ${consulta.prevision}</div>`);
   }
 }
 
-document.write('<ol>');
-for(let consulta of dental){
-  document.write(`<li>${consulta.paciente}</li>`);
-}
-document.write('</ol>');
-
+document.write(`<hr>`)
 
 //Ejercicio N6
-
+document.write(`<p>Listado de pacientes pertenecientes a FONASA de la consulta de Traumatologia:</p>`)
 for(let consulta of traumatologia){
   if(consulta.prevision === 'FONASA'){
     document.write(`<div style="margin-top: 10px">${consulta.paciente} - ${consulta.prevision}</div>`); // Se pueden agregar estilos directos
   }
 }
+document.write(`<hr>`)
 
 //Agregar código para el desafio 2 aquí
+
+document.write(`<p>Otras estadisticas:</p>`)
 
 document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
 document.write(`<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`);
