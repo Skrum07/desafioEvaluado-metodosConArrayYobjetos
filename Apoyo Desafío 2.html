@@ -55,7 +55,32 @@ for(let consulta of dental){
   document.write(`<p class="consulta">${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`); // Se pueden agregar clases
 }
 
+// Ejercicio N4 
+document.write('<ol>');
+for(let consulta of dental){
+  document.write(`<li>${consulta.paciente}</li>`);
+}
+document.write('</ol>');
 
+document.write('<ol>');
+for(let consulta of traumatologia){
+  document.write(`<li>${consulta.paciente}</li>`);
+}
+document.write('</ol>');
+
+document.write('<ol>');
+for(let consulta of radiologia){
+  document.write(`<li>${consulta.paciente}</li>`);
+}
+document.write('</ol>');
+
+// Ejercicio 5
+
+for(let consulta of dental){
+  if(consulta.prevision === 'ISAPRE'){
+    document.write(`<div>${consulta.paciente} - ${consulta.prevision}</div>`);
+  }
+}
 
 
 //Agregar código para el desafio 2 aquí
